@@ -4,19 +4,21 @@
  * and open the template in the editor.
  */
 package bandeaupublicitaire;
-import java.awt.Color;
+
 import java.awt.Font;
+
 /**
  *
  * @author kevin
  */
-public class BandeauPublicitaire {
-    private final Bandeau monBandeau = new Bandeau();
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class Clignoter extends Effet {
+    public void afficheToiSur(Bandeau b, String message){
+       for (int i = 1; i < 10 ; i++) {
+		b.setMessage(message);
+		b.sleep(100);
+                b.setMessage(" ");
+		b.sleep(100);
+	}
     
+}
 }
