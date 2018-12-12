@@ -5,6 +5,9 @@
  */
 package bandeaupublicitaire;
 
+import java.awt.Color;
+import java.awt.Font;
+
 
 /**
  *
@@ -13,13 +16,26 @@ package bandeaupublicitaire;
 abstract class Effet  {
     Bandeau b;
     String message;
+    Font font = b.getFont();
+    Color back = b.getBackground();
+    Color fore = b.getForeground();
+  
     
     Effet(Bandeau b, String message){
+    
         this.b = b;
         this.message = message;
 
 }
     
-   abstract void afficheToiSur();
+  abstract void afficheToiSur();
+   
+  void nombreDeRepetition(int nombre) {
+        int i;
+        
+        for(i=0 ;i<= nombre; i++){
+            this.afficheToiSur();
+        }
+    }
     
 }
