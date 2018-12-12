@@ -10,10 +10,13 @@ package bandeaupublicitaire;
  * @author kevin
  */
 public class TeleType extends Effet {
+
+    public TeleType(Bandeau b, String message) {
+        super(b, message);
+    }
     
-    public void afficheToiSur(Bandeau b, String message){
-        
-       String values[] = message.split("");
+    void afficheToiSur() {
+        String values[] = message.split("");
        for (int i = 1; i < values.length ; i++) {
            b.setMessage(values[i]);
 		b.sleep(1000);

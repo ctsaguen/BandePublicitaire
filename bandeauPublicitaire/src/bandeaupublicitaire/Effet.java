@@ -11,7 +11,15 @@ package bandeaupublicitaire;
  * @author kevin
  */
 abstract class Effet  {
+    Bandeau b;
+    String message;
     
-   abstract void afficheToiSur(Bandeau b, String message);
+    Effet(Bandeau b, String message){
+        this.b = b;
+        this.message = message;
+
+}
+    
+   abstract void afficheToiSur();
     
 }

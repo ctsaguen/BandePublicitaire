@@ -12,8 +12,12 @@ import java.awt.Font;
  * @author kevin
  */
 public class Zoom extends Effet {
+
+    public Zoom(Bandeau b, String message) {
+        super(b, message);
+    }
     
-    public void afficheToiSur(Bandeau b, String message){
+    void afficheToiSur() {
         b.setMessage(message);
 	b.sleep(1000);
 	b.setMessage("Zoom........");
@@ -22,6 +26,7 @@ public class Zoom extends Effet {
 		b.sleep(100);
 	}
 	b.sleep(1000);
+    }
+
     
-}
 }
