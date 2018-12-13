@@ -13,13 +13,13 @@ import java.awt.Font;
  */
 public class Rotation extends Effet {
 
-    public Rotation(Bandeau b, String message) {
-        super(b, message);
+    public Rotation(String message) {
+        super(message);
     }
 
     void afficheToiSur() {
 	b.setMessage(message);
-	b.sleep(1000);
+	b.sleep(100);
 	for (int i = 0; i <= 100; i++) {
 		b.setRotation(2*Math.PI*i / 100);
 		b.sleep(100);

@@ -6,8 +6,6 @@
 package bandeaupublicitaire;
 
 import java.awt.Color;
-import java.awt.Font;
-import static javafx.scene.text.Font.font;
 
 /**
  *
@@ -15,23 +13,23 @@ import static javafx.scene.text.Font.font;
  */
 public class ChangerCouleur extends Effet {
 
-    public ChangerCouleur(Bandeau b, String message) {
-        super(b, message);
+    public ChangerCouleur( String messages) {
+        super( messages);
     }
 
     void afficheToiSur() {
         b.setMessage(message);
-	b.sleep(1000);
+        b.getMessage();
+	b.sleep(100);
 	b.setBackground(Color.DARK_GRAY);
-	b.sleep(1000);
+	b.sleep(100);
 	b.setForeground(Color.YELLOW);
-	b.sleep(1000);
+	b.sleep(100);
 	b.setFont(font);
-        b.sleep(1000);
+        b.sleep(100);
 	b.setForeground(fore);
-        b.sleep(1000);
+        b.sleep(100);
 	b.setBackground(back);
-        b.sleep(1000);
     }
     
 }

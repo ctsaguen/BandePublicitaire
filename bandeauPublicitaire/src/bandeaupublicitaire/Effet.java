@@ -14,17 +14,17 @@ import java.awt.Font;
  * @author kevin
  */
 abstract class Effet  {
-    Bandeau b;
-    String message;
-    Font font = b.getFont();
-    Color back = b.getBackground();
-    Color fore = b.getForeground();
+    protected final Bandeau b = new Bandeau();
+    protected String message;
+     Font font = b.getFont();
+     Color back = b.getBackground();
+     Color fore = b.getForeground();
   
     
-    Effet(Bandeau b, String message){
-    
-        this.b = b;
+    Effet( String message){
+        
         this.message = message;
+        b.setMessage(message);
 
 }
     
@@ -33,7 +33,7 @@ abstract class Effet  {
   void nombreDeRepetition(int nombre) {
         int i;
         
-        for(i=0 ;i<= nombre; i++){
+        for(i=1 ;i<= nombre; i++){
             this.afficheToiSur();
         }
     }

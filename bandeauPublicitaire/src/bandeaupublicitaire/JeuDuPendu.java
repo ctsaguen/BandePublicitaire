@@ -13,8 +13,8 @@ import java.awt.Font;
  */
 public class JeuDuPendu extends Effet{
 
-    public JeuDuPendu(Bandeau b, String message) {
-        super(b, message);
+    public JeuDuPendu(String message) {
+        super(message);
     }
 
     @Override

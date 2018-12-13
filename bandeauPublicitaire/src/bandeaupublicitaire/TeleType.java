@@ -5,21 +5,26 @@
  */
 package bandeaupublicitaire;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author kevin
  */
 public class TeleType extends Effet {
 
-    public TeleType(Bandeau b, String message) {
-        super(b, message);
+    public TeleType(String message) {
+        super(message);
     }
     
     void afficheToiSur() {
         String values[] = message.split("");
+        String textFinal = values[0];
+        b.sleep(500);
        for (int i = 1; i < values.length ; i++) {
-           b.setMessage(values[i]);
-		b.sleep(1000);
+           textFinal = textFinal + values[i];
+           b.setMessage(textFinal);
+		b.sleep(400);
        }
     }
 }

@@ -13,16 +13,16 @@ import java.awt.Font;
  */
 public class Clignoter extends Effet {  
 
-    public Clignoter(Bandeau b, String message) {
-        super(b, message);
+    public Clignoter(String message) {
+        super(message);
     }
     
     void afficheToiSur() {
          for (int i = 1; i < 10 ; i++) {
 		b.setMessage(message);
-		b.sleep(100);
+		b.sleep(150);
                 b.setMessage(" ");
-		b.sleep(100);
+		b.sleep(1000);
 	}
     }
 }

@@ -13,13 +13,13 @@ import java.awt.Font;
  */
 public class Zoom extends Effet {
 
-    public Zoom(Bandeau b, String message) {
-        super(b, message);
+    public Zoom(String message) {
+        super(message);
     }
     
     void afficheToiSur() {
         b.setMessage(message);
-	b.sleep(1000);
+	b.sleep(100);
 	b.setMessage("Zoom........");
 	for (int i = 5; i < 60 ; i+=5) {
 		b.setFont(new Font("Dialog", Font.BOLD, 5+i));
